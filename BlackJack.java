@@ -88,6 +88,31 @@ public class BlackJack {
                                 cpuHit = true; 
                                 System.out.println(dealerName + randomCardsCPU());
                                 System.out.println(dealerName + "'s" + " sum is " + cpuCount);
+                                cpuHit = false;
+                                cpuPass = true;
+                                if (cpuPass && playerPass) {
+                                    if (cpuCount > playerCount) {
+                                        System.out.println("The Dealer won!");
+                                        cpuTurn = false; 
+                                        gameRunning = false; 
+                                        break; 
+                                    }
+                                     else if (playerCount > cpuCount) {
+                                        System.out.println( name + " won!");
+                                        cpuTurn = false; 
+                                        gameRunning = false; 
+                                        break; 
+                                    }
+                                    else if (playerCount == cpuCount) {
+                                        System.out.println( "The Dealer and " + name + " tied! Good luck next time");
+                                        cpuTurn = false; 
+                                        gameRunning = false; 
+                                        break; 
+                                    }
+                                    cpuTurn = false; 
+                                    gameRunning = false; 
+                                    break;
+                                    }
                             } else if (cpuCount > 16)  {
                                 cpuHit = false;
                                 cpuPass = true;
@@ -137,12 +162,37 @@ public class BlackJack {
                                 cpuHit = true; 
                                 System.out.println(dealerName + randomCardsCPU());
                                 System.out.println(dealerName + "'s" + " sum is " + cpuCount);
+                                cpuHit = false;
+                                cpuPass = true;
+                                if (cpuPass && playerPass) {
+                                    if (cpuCount > playerCount) {
+                                        System.out.println("The Dealer won!");
+                                        cpuTurn = false; 
+                                        gameRunning = false; 
+                                        break; 
+                                    }
+                                     else if (playerCount > cpuCount) {
+                                        System.out.println( name + " won!");
+                                        cpuTurn = false; 
+                                        gameRunning = false; 
+                                        break; 
+                                    }
+                                    else if (playerCount == cpuCount) {
+                                        System.out.println( "The Dealer and " + name + " tied! Good luck next time");
+                                        cpuTurn = false; 
+                                        gameRunning = false; 
+                                        break; 
+                                    }
+                                    cpuTurn = false; 
+                                    gameRunning = false; 
+                                    break;
+                                    }
                             } else if (cpuCount > 16)  {
                                 cpuHit = false;
                                 cpuPass = true;
                                 if (cpuPass && playerPass) {
                                     if (cpuCount > playerCount) {
-                                        System.out.println("The dealer won!");
+                                        System.out.println("The Dealer won!");
                                         cpuTurn = false; 
                                         gameRunning = false; 
                                         break; 
