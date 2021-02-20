@@ -78,18 +78,16 @@ public class BlackJack {
                             System.out.println(dealerName + randomCardsCPU() + " and" + randomCardsCPU());
                             System.out.println(dealerName + "'s" + " sum is: " + cpuCount); 
                             cpuTurn = true; 
-                            while (cpuTurn) {
+                            while (gameRunning) {
                                 if (cpuCount > 21) {
                                     System.out.println("The Dealer busted. " + name + " won!");
                                     gameRunning = false; 
                                     break; 
                                 }
-                            if (cpuCount < 16) {
+                            if (cpuCount < 17) {
                                 cpuHit = true; 
                                 System.out.println(dealerName + randomCardsCPU());
                                 System.out.println(dealerName + "'s" + " sum is " + cpuCount);
-                                cpuHit = false;
-                                cpuPass = true;
                                 if (cpuPass && playerPass) {
                                     if (cpuCount > playerCount) {
                                         System.out.println("The Dealer won!");
@@ -113,7 +111,7 @@ public class BlackJack {
                                     gameRunning = false; 
                                     break;
                                     }
-                            } else if (cpuCount > 16)  {
+                            } else if (cpuCount >= 17)  {
                                 cpuHit = false;
                                 cpuPass = true;
                                 if (cpuPass && playerPass) {
@@ -152,18 +150,16 @@ public class BlackJack {
                             System.out.println(dealerName + randomCardsCPU() + " and" + randomCardsCPU());
                             System.out.println(dealerName + "'s" + " sum is: " + cpuCount); 
                             cpuTurn = true; 
-                            while (cpuTurn) {
+                            while (gameRunning) {
                                 if (cpuCount > 21) {
                                     System.out.println("The Dealer busted. " + name + " won!");
                                     gameRunning = false; 
                                     break; 
                                 }
-                            if (cpuCount < 16) {
+                            if (cpuCount < 17) {
                                 cpuHit = true; 
                                 System.out.println(dealerName + randomCardsCPU());
                                 System.out.println(dealerName + "'s" + " sum is " + cpuCount);
-                                cpuHit = false;
-                                cpuPass = true;
                                 if (cpuPass && playerPass) {
                                     if (cpuCount > playerCount) {
                                         System.out.println("The Dealer won!");
@@ -187,7 +183,7 @@ public class BlackJack {
                                     gameRunning = false; 
                                     break;
                                     }
-                            } else if (cpuCount > 16)  {
+                            } else if (cpuCount >= 17)  {
                                 cpuHit = false;
                                 cpuPass = true;
                                 if (cpuPass && playerPass) {
